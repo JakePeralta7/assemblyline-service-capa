@@ -79,7 +79,18 @@
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 0,
+          "score_map": {},
+          "signatures": {
+            "C0007": 1,
+            "C0038": 1,
+            "F0001.009": 1
+          }
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "Malware Behavior Catalog",
@@ -122,7 +133,20 @@
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 0,
+          "score_map": {},
+          "signatures": {
+            "compiled to the .NET platform": 1,
+            "manipulate unmanaged memory in .NET": 1,
+            "packed with Confuser": 1,
+            "spawn thread to RWX shellcode": 1,
+            "unmanaged call": 1
+          }
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "Capabilities",
@@ -142,6 +166,26 @@
         ],
         "heur_id": 1,
         "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": [
+          "F0001.009",
+          "C0007",
+          "C0038"
+        ]
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": [
+          "compiled to the .NET platform",
+          "manipulate unmanaged memory in .NET",
+          "packed with Confuser",
+          "spawn thread to RWX shellcode",
+          "unmanaged call"
+        ]
       }
     ],
     "tags": {},

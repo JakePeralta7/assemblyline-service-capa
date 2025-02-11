@@ -89,7 +89,19 @@
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 0,
+          "score_map": {},
+          "signatures": {
+            "C0018": 1,
+            "C0040": 1,
+            "E1083": 1,
+            "E1083.m01": 1
+          }
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "Malware Behavior Catalog",
@@ -140,7 +152,23 @@
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 0,
+          "score_map": {},
+          "signatures": {
+            "access the Windows event log": 1,
+            "allocate thread local storage": 1,
+            "clear Windows event logs": 1,
+            "get common file path": 1,
+            "get system information on Windows": 1,
+            "link many functions at runtime": 1,
+            "linked against CPP standard library": 1,
+            "terminate process": 1
+          }
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "Capabilities",
@@ -163,6 +191,30 @@
         ],
         "heur_id": 1,
         "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": [
+          "E1083",
+          "E1083.m01",
+          "C0040",
+          "C0018"
+        ]
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": [
+          "access the Windows event log",
+          "allocate thread local storage",
+          "clear Windows event logs",
+          "get common file path",
+          "get system information on Windows",
+          "link many functions at runtime",
+          "linked against CPP standard library",
+          "terminate process"
+        ]
       }
     ],
     "tags": {},

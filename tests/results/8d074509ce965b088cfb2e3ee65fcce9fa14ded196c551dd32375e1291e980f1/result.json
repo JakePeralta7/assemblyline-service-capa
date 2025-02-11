@@ -71,7 +71,19 @@
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 0,
+          "score_map": {},
+          "signatures": {
+            "C0023.001": 1,
+            "C0036.006": 1,
+            "C0037.001": 1,
+            "C0038": 1
+          }
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "Malware Behavior Catalog",
@@ -110,7 +122,20 @@
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 0,
+          "score_map": {},
+          "signatures": {
+            "contains PDB path": 1,
+            "create thread": 1,
+            "query or enumerate registry value": 1,
+            "register minifilter driver": 1,
+            "start minifilter driver": 1
+          }
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "Capabilities",
@@ -130,6 +155,27 @@
         ],
         "heur_id": 1,
         "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": [
+          "C0037.001",
+          "C0023.001",
+          "C0036.006",
+          "C0038"
+        ]
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": [
+          "contains PDB path",
+          "create thread",
+          "query or enumerate registry value",
+          "register minifilter driver",
+          "start minifilter driver"
+        ]
       }
     ],
     "tags": {},

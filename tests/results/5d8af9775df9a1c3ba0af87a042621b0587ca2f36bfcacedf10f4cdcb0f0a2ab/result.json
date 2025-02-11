@@ -72,7 +72,18 @@
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 0,
+          "score_map": {},
+          "signatures": {
+            "B0032.017": 1,
+            "B0032.020": 1,
+            "E1082": 1
+          }
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "Malware Behavior Catalog",
@@ -103,7 +114,18 @@
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 0,
+          "score_map": {},
+          "signatures": {
+            "check OS version": 1,
+            "contain obfuscated stackstrings": 1,
+            "contains PDB path": 1
+          }
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "Capabilities",
@@ -124,6 +146,24 @@
         ],
         "heur_id": 1,
         "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": [
+          "B0032.020",
+          "B0032.017",
+          "E1082"
+        ]
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": [
+          "check OS version",
+          "contain obfuscated stackstrings",
+          "contains PDB path"
+        ]
       }
     ],
     "tags": {},

@@ -147,7 +147,27 @@
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 0,
+          "score_map": {},
+          "signatures": {
+            "B0009": 1,
+            "C0017": 1,
+            "C0026.002": 1,
+            "C0036.006": 1,
+            "C0045": 1,
+            "C0051": 1,
+            "C0052": 1,
+            "E1027.m02": 1,
+            "E1027.m03": 1,
+            "E1082": 1,
+            "E1083": 1,
+            "F0007.001": 1
+          }
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "Malware Behavior Catalog",
@@ -218,7 +238,28 @@
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 0,
+          "score_map": {},
+          "signatures": {
+            "check OS version": 1,
+            "copy file": 1,
+            "create process on Windows": 1,
+            "encode data using ADD XOR SUB operations": 1,
+            "encode data using XOR": 1,
+            "get common file path": 1,
+            "link function at runtime on Windows": 1,
+            "query environment variable": 1,
+            "query or enumerate registry value": 1,
+            "read file on Windows": 1,
+            "reference anti-VM strings targeting VMWare": 1,
+            "self delete": 1,
+            "write file on Windows": 1
+          }
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "Capabilities",
@@ -244,6 +285,43 @@
         ],
         "heur_id": 1,
         "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": [
+          "B0009",
+          "C0026.002",
+          "E1027.m03",
+          "E1027.m02",
+          "F0007.001",
+          "E1083",
+          "E1082",
+          "C0045",
+          "C0051",
+          "C0052",
+          "C0036.006",
+          "C0017"
+        ]
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": [
+          "check OS version",
+          "copy file",
+          "create process on Windows",
+          "encode data using ADD XOR SUB operations",
+          "encode data using XOR",
+          "get common file path",
+          "link function at runtime on Windows",
+          "query environment variable",
+          "query or enumerate registry value",
+          "read file on Windows",
+          "reference anti-VM strings targeting VMWare",
+          "self delete",
+          "write file on Windows"
+        ]
       }
     ],
     "tags": {},

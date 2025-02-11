@@ -88,7 +88,20 @@
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 0,
+          "score_map": {},
+          "signatures": {
+            "B0023": 1,
+            "C0007": 1,
+            "C0026.002": 1,
+            "E1027.m02": 1,
+            "F0002.001": 1
+          }
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "Malware Behavior Catalog",
@@ -127,7 +140,20 @@
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 0,
+          "score_map": {},
+          "signatures": {
+            "contain an embedded PE file": 1,
+            "encode data using XOR": 1,
+            "execute shellcode via indirect call": 1,
+            "log keystrokes via application hook": 1,
+            "modify access privileges": 1
+          }
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "Capabilities",
@@ -149,6 +175,28 @@
         ],
         "heur_id": 1,
         "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": [
+          "F0002.001",
+          "C0026.002",
+          "E1027.m02",
+          "B0023",
+          "C0007"
+        ]
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": [
+          "contain an embedded PE file",
+          "encode data using XOR",
+          "execute shellcode via indirect call",
+          "log keystrokes via application hook",
+          "modify access privileges"
+        ]
       }
     ],
     "tags": {},

@@ -89,7 +89,20 @@
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 0,
+          "score_map": {},
+          "signatures": {
+            "B0013.001": 1,
+            "C0021": 1,
+            "C0026.002": 1,
+            "C0032.001": 1,
+            "E1027.m02": 1
+          }
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "Malware Behavior Catalog",
@@ -140,7 +153,22 @@
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 0,
+          "score_map": {},
+          "signatures": {
+            "compiled with Borland Delphi": 1,
+            "contain a thread local storage (.tls) section": 1,
+            "encode data using XOR": 1,
+            "generate random numbers using the Delphi LCG": 1,
+            "hash data with CRC32": 1,
+            "packaged as an Inno Setup installer": 1,
+            "reference analysis tools strings": 1
+          }
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "Capabilities",
@@ -160,6 +188,30 @@
         ],
         "heur_id": 1,
         "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": [
+          "C0021",
+          "C0032.001",
+          "C0026.002",
+          "E1027.m02",
+          "B0013.001"
+        ]
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": [
+          "compiled with Borland Delphi",
+          "contain a thread local storage (.tls) section",
+          "encode data using XOR",
+          "generate random numbers using the Delphi LCG",
+          "hash data with CRC32",
+          "packaged as an Inno Setup installer",
+          "reference analysis tools strings"
+        ]
       }
     ],
     "tags": {},

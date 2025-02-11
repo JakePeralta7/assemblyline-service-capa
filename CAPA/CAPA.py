@@ -129,11 +129,7 @@ class CAPA(ServiceBase):
                 objectives[mbc.objective].add((mbc.behavior, mbc.method, mbc.id))
             if rule.meta.name not in subrule_matches:
                 count = len(rule.matches)
-                if count == 1:
-                    capability = rule.meta.name
-                else:
-                    capability = f"{rule.meta.name} ({count} matches)"
-                caps.append((capability, rule.meta.namespace if rule.meta.namespace else ""))
+                caps.append((rule.meta.name, count, rule.meta.namespace if rule.meta.namespace else ""))
 
         self.render_attack(request, tactics)
         self.render_mbc(request, objectives)
@@ -162,6 +158,7 @@ class CAPA(ServiceBase):
     def render_mbc(self, request, objectives):
         added = False
         res = ResultTableSection("Malware Behavior Catalog")
+        res.set_heuristic(1)
         for objective, behaviors in sorted(objectives.items()):
             for behavior, method, id in sorted(behaviors):
                 res.add_row(
@@ -173,6 +170,7 @@ class CAPA(ServiceBase):
                         }
                     )
                 )
+                res.heuristic.add_signature_id(id)
                 added = True
         if added:
             request.result.add_section(res)
@@ -180,15 +178,22 @@ class CAPA(ServiceBase):
     def render_capabilities(self, request, caps):
         added = False
         res = ResultTableSection("Capabilities")
-        for cap, namespace in sorted(caps):
+        res.set_heuristic(1)
+        for cap, count, namespace in sorted(caps):
+            if count == 1:
+                capability = cap
+            else:
+                capability = f"{cap} ({count} matches)"
             res.add_row(
                 TableRow(
                     {
-                        "Capability": cap,
+                        "Capability": capability,
                         "Namespace": namespace,
                     }
                 )
             )
+            if not cap.startswith("(internal)"):
+                res.heuristic.add_signature_id(cap)
             added = True
         if added:
             request.result.add_section(res)
@@ -220,6 +225,12 @@ class CAPA(ServiceBase):
 
             res = ResultOrderedKeyValueSection(capability)
 
+            if not rule.meta.name.startswith("(internal)") or rule.meta.attack or rule.meta.mbc:
+                res.set_heuristic(1)
+
+            if not rule.meta.name.startswith("(internal)"):
+                res.heuristic.add_signature_id(rule.meta.name)
+
             res.add_item("namespace", rule.meta.namespace if rule.meta.namespace else "")
 
             if rule.meta.maec.analysis_conclusion or rule.meta.maec.analysis_conclusion_ov:
@@ -240,13 +251,13 @@ class CAPA(ServiceBase):
                 res.add_item("description", rule.meta.description)
 
             if rule.meta.attack:
-                res.set_heuristic(1)
                 [res.heuristic.add_attack_id(data.id) for data in rule.meta.attack]
                 res.add_item(
                     "att&ck", ", ".join(["%s [%s]" % ("::".join(data.parts), data.id) for data in rule.meta.attack])
                 )
 
             if rule.meta.mbc:
+                [res.heuristic.add_signature_id(data.id) for data in rule.meta.mbc]
                 res.add_item("mbc", ", ".join(["%s [%s]" % ("::".join(data.parts), data.id) for data in rule.meta.mbc]))
 
             request.result.add_section(res)

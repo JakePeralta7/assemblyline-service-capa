@@ -81,7 +81,21 @@
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 0,
+          "score_map": {},
+          "signatures": {
+            "B0009": 1,
+            "C0017": 1,
+            "C0018": 1,
+            "C0038": 1,
+            "C0051": 1,
+            "C0055": 1
+          }
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "Malware Behavior Catalog",
@@ -144,7 +158,26 @@
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 0,
+          "score_map": {},
+          "signatures": {
+            "access .NET resource": 1,
+            "compiled to the .NET platform": 1,
+            "create a process with modified I/O handles and window": 1,
+            "create process on Windows": 1,
+            "create thread": 1,
+            "find data using regex in .NET": 1,
+            "read file on Windows": 1,
+            "reference anti-VM strings targeting VMWare": 1,
+            "reference anti-VM strings targeting VirtualBox": 1,
+            "suspend thread": 1,
+            "terminate process": 1
+          }
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "Capabilities",
@@ -164,6 +197,35 @@
         ],
         "heur_id": 1,
         "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": [
+          "B0009",
+          "C0051",
+          "C0017",
+          "C0038",
+          "C0055",
+          "C0018"
+        ]
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": [
+          "access .NET resource",
+          "compiled to the .NET platform",
+          "create a process with modified I/O handles and window",
+          "create process on Windows",
+          "create thread",
+          "find data using regex in .NET",
+          "read file on Windows",
+          "reference anti-VM strings targeting VMWare",
+          "reference anti-VM strings targeting VirtualBox",
+          "suspend thread",
+          "terminate process"
+        ]
       }
     ],
     "tags": {},

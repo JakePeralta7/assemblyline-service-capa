@@ -33,10 +33,10 @@ submission_params:
     list: ["default", "simple", "verbose"]
 
 heuristics:
-  - description: CAPA found some ATT&CK IDs
+  - description: CAPA found a matching signature
     filetype: "executable/windows"
     heur_id: 1
-    name: ATT&CK ID Found
+    name: Signature Found
     score: 0
 
 docker_config:

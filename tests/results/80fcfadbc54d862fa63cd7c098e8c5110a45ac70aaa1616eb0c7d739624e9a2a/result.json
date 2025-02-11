@@ -131,7 +131,25 @@
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 0,
+          "score_map": {},
+          "signatures": {
+            "C0018": 1,
+            "C0036.006": 1,
+            "C0040": 1,
+            "C0045": 1,
+            "C0046": 1,
+            "C0049": 1,
+            "C0051": 1,
+            "C0052": 1,
+            "E1059": 1,
+            "E1083": 1
+          }
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "Malware Behavior Catalog",
@@ -222,7 +240,33 @@
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 0,
+          "score_map": {},
+          "signatures": {
+            "accept command line arguments": 1,
+            "allocate thread local storage": 1,
+            "check if file exists": 1,
+            "contains PDB path": 1,
+            "copy file": 1,
+            "create directory": 1,
+            "enumerate files on Windows": 1,
+            "get file attributes": 1,
+            "get file version info": 1,
+            "get geographical location": 1,
+            "get system information on Windows": 1,
+            "link many functions at runtime": 1,
+            "parse PE header": 1,
+            "query or enumerate registry value": 1,
+            "read .ini file": 1,
+            "resolve function by parsing PE exports": 1,
+            "terminate process": 1,
+            "write file on Windows": 1
+          }
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "Capabilities",
@@ -247,6 +291,46 @@
         ],
         "heur_id": 1,
         "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": [
+          "E1083",
+          "E1059",
+          "C0045",
+          "C0046",
+          "C0049",
+          "C0051",
+          "C0052",
+          "C0036.006",
+          "C0040",
+          "C0018"
+        ]
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": [
+          "accept command line arguments",
+          "allocate thread local storage",
+          "check if file exists",
+          "contains PDB path",
+          "copy file",
+          "create directory",
+          "enumerate files on Windows",
+          "get file attributes",
+          "get file version info",
+          "get geographical location",
+          "get system information on Windows",
+          "link many functions at runtime",
+          "parse PE header",
+          "query or enumerate registry value",
+          "read .ini file",
+          "resolve function by parsing PE exports",
+          "terminate process",
+          "write file on Windows"
+        ]
       }
     ],
     "tags": {},

@@ -56,7 +56,16 @@
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 0,
+          "score_map": {},
+          "signatures": {
+            "C0038": 1
+          }
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "Malware Behavior Catalog",
@@ -103,7 +112,22 @@
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 0,
+          "score_map": {},
+          "signatures": {
+            "access .NET resource": 1,
+            "compiled to the .NET platform": 1,
+            "contains PDB path": 1,
+            "create thread": 1,
+            "interact with driver via control codes": 1,
+            "manipulate unmanaged memory in .NET": 1,
+            "unmanaged call": 1
+          }
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "Capabilities",
@@ -123,6 +147,26 @@
         ],
         "heur_id": 1,
         "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": [
+          "C0038"
+        ]
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": [
+          "access .NET resource",
+          "compiled to the .NET platform",
+          "contains PDB path",
+          "create thread",
+          "interact with driver via control codes",
+          "manipulate unmanaged memory in .NET",
+          "unmanaged call"
+        ]
       }
     ],
     "tags": {},

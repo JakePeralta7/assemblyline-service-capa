@@ -93,7 +93,21 @@
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 0,
+          "score_map": {},
+          "signatures": {
+            "B0032.017": 1,
+            "B0032.020": 1,
+            "C0007": 1,
+            "C0018": 1,
+            "C0033": 1,
+            "C0040": 1
+          }
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "Malware Behavior Catalog",
@@ -144,7 +158,23 @@
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 0,
+          "score_map": {},
+          "signatures": {
+            "allocate or change RWX memory": 1,
+            "allocate thread local storage": 1,
+            "contain obfuscated stackstrings": 1,
+            "contains PDB path": 1,
+            "get geographical location": 1,
+            "link many functions at runtime": 1,
+            "manipulate console buffer": 1,
+            "terminate process": 1
+          }
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "Capabilities",
@@ -166,6 +196,32 @@
         ],
         "heur_id": 1,
         "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": [
+          "B0032.020",
+          "B0032.017",
+          "C0007",
+          "C0033",
+          "C0040",
+          "C0018"
+        ]
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": [
+          "allocate or change RWX memory",
+          "allocate thread local storage",
+          "contain obfuscated stackstrings",
+          "contains PDB path",
+          "get geographical location",
+          "link many functions at runtime",
+          "manipulate console buffer",
+          "terminate process"
+        ]
       }
     ],
     "tags": {},

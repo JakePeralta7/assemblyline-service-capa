@@ -86,7 +86,22 @@
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 0,
+          "score_map": {},
+          "signatures": {
+            "C0007": 1,
+            "C0017": 1,
+            "C0017.003": 1,
+            "C0018": 1,
+            "C0052": 1,
+            "C0054": 1,
+            "E1082": 1
+          }
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "Malware Behavior Catalog",
@@ -145,7 +160,25 @@
         "body_format": "TABLE",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 0,
+          "score_map": {},
+          "signatures": {
+            "allocate or change RWX memory": 1,
+            "contain a thread local storage (.tls) section": 1,
+            "create a process with modified I/O handles and window": 1,
+            "create process on Windows": 1,
+            "create process suspended": 1,
+            "get thread local storage value": 1,
+            "query environment variable": 1,
+            "resume thread": 1,
+            "terminate process": 1,
+            "write file on Windows": 1
+          }
+        },
         "promote_to": null,
         "tags": {},
         "title_text": "Capabilities",
@@ -165,6 +198,35 @@
         ],
         "heur_id": 1,
         "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": [
+          "E1082",
+          "C0052",
+          "C0007",
+          "C0017",
+          "C0017.003",
+          "C0054",
+          "C0018"
+        ]
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": [
+          "allocate or change RWX memory",
+          "contain a thread local storage (.tls) section",
+          "create a process with modified I/O handles and window",
+          "create process on Windows",
+          "create process suspended",
+          "get thread local storage value",
+          "query environment variable",
+          "resume thread",
+          "terminate process",
+          "write file on Windows"
+        ]
       }
     ],
     "tags": {},
