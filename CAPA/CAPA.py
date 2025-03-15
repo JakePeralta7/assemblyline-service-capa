@@ -52,11 +52,11 @@ class CAPA(ServiceBase):
         self.argv = [
             "--quiet",
             "--signatures",
-            # Ruleset downloaded from https://github.com/fireeye/capa/tree/v7.0.1/sigs
+            # Ruleset downloaded from https://github.com/mandiant/capa/tree/v9.1.0/sigs
             os.path.join(os.path.dirname(__file__), "sigs"),
             "--rules",
-            # Ruleset downloaded from https://github.com/mandiant/capa-rules/archive/refs/tags/v7.0.1.zip
-            os.path.join(os.path.dirname(__file__), "capa-rules-7.0.1"),
+            # Ruleset downloaded from https://github.com/mandiant/capa-rules/archive/refs/tags/v9.1.0.zip
+            os.path.join(os.path.dirname(__file__), "capa-rules-9.1.0"),
             "--format",
             "auto",
             "--backend",
